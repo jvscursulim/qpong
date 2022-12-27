@@ -24,6 +24,13 @@ class Ball(pygame.sprite.Sprite):
 
             self.velocity[1] = -self.velocity[1]
 
+        if self.rect.x < 0:
+
+            self.reset(1)
+        elif self.rect.x > globals.WINDOW_WIDTH:
+
+            self.reset(-1)
+
     def bounce(self):
 
         self.velocity[0] = -self.velocity[0] * 1.5
