@@ -17,7 +17,23 @@ git clone https://github.com/jvscursulim/qpong.git
 cd qpong
 ```
 
-* Step 3: Install pipenv
+* Step 3: Create a virtual environment
+
+```bash
+python -m venv env
+```
+
+* Step 4: Activate your virtual environment
+Windows (Powershell)
+```bash
+env/Scripts/Activate.ps1
+```
+Linux
+```bash
+source env/bin/activate
+```
+
+* Step 5: Install pipenv
 
 ```bash
 pip install -r requirements.txt
@@ -27,17 +43,17 @@ OR
 pip install pipenv
 ```
 
-* Step 4: Install the requiments using pipenv
+* Step 6: Install the requiments using pipenv
 ```bash
 pipenv install
 ```
 
-* Step 5: Run the game using the following command
+* Step 7: Run the game using the following command
 ```bash
 python qpong.py
 ```
 
-* Step 6: Have fun and learn a little bit about quantum computing! :)
+* Step 8: Have fun and learn a little bit about quantum computing! :)
 
 ## How to play 
 
