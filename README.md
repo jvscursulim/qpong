@@ -3,7 +3,11 @@
 ![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
 
 ## Description
-Reproducing an implementation of a quantum verison of the game pong called QPong.
+This repository is a code that reproduces the QPong game constructed during the [12 days of Qiskit](https://www.youtube.com/watch?v=7nhzINorKbs&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=1) promoted by IBM Quantum.
+
+QPong is a quantum version of the classical video game called pong. In this game, you need to construct quantum circuits, using quantum gates, to defend the ball and beat the classical computer. Are you ready to demonstrate that a quantum computer can beat a classical computer in pong? Do you accept the challenge?
+
+I promisse that will be legen...wait for it...dary! Legendary!
 
 ## How to install and run
 
@@ -83,9 +87,9 @@ python qpong.py
 
 ## Printscreens
 
-![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
-![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
-![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/printscreens/print1.png)
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/printscreens/print2.png)
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/printscreens/print3.png)
 
 ## References:
 
