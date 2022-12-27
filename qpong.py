@@ -1,6 +1,6 @@
 import pygame
 from assets import WINDOW_WIDTH, WINDOW_HEIGHT, FPS, FIELD_HEIGHT, WIDTH_UNIT, BLACK
-from assets import CircuitGrid, ui, paddle, ball, computer
+from assets import CircuitGrid, ui, paddle, ball, computer, globals
 
 pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -26,19 +26,36 @@ def main():
         # update game
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+
                 exit = True
             elif event.type == pygame.KEYDOWN:
+
                 circuit_grid.handle_input(event.key)
 
-        pong_ball.update()
+        pong_ball.update(classical_computer, quantum_computer)
         classical_computer.update(pong_ball)
         quantum_computer.update(pong_ball)
 
         # draw game
         screen.fill(BLACK)
-        circuit_grid.draw(screen)
-        ui.draw_statevector_grid(screen)
-        moving_sprites.draw(screen)
+
+        if classical_computer.score >= globals.WIN_SCORE:
+
+            pong_ball.velocity[0] = 0
+            pong_ball.velocity[1] = 0
+            ui.draw_lose_scene(screen)
+        elif quantum_computer.score >= globals.WIN_SCORE:
+
+            pong_ball.velocity[0] = 0
+            pong_ball.velocity[1] = 0
+            ui.draw_win_scene(screen)
+        else:
+
+            circuit_grid.draw(screen)
+            ui.draw_statevector_grid(screen)
+            ui.draw_score(screen, classical_computer.score, quantum_computer.score)
+            ui.draw_dashed_line(screen)
+            moving_sprites.draw(screen)
         pygame.display.flip()
 
         # set game framerate

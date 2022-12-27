@@ -15,7 +15,7 @@ class Ball(pygame.sprite.Sprite):
         self.initial_speed = 2
         self.reset(-1)
 
-    def update(self):
+    def update(self, classical_computer, quantum_computer):
 
         self.rect.x += self.velocity[0]
         self.rect.y += self.velocity[1]
@@ -27,9 +27,11 @@ class Ball(pygame.sprite.Sprite):
         if self.rect.x < 0:
 
             self.reset(1)
+            quantum_computer.score += 1
         elif self.rect.x > globals.WINDOW_WIDTH:
 
             self.reset(-1)
+            classical_computer.score += 1
 
     def bounce(self):
 
