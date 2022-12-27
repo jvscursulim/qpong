@@ -1,5 +1,7 @@
 # QPong - 12 Days of Qiskit
 
+![Image](assets\images\Logo.png)
+
 ## Description
 Reproducing an implementation of a quantum verison of the game pong called QPong.
 
