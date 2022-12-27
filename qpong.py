@@ -1,6 +1,6 @@
 import pygame
-from assets import WINDOW_WIDTH, WINDOW_HEIGHT, FPS, FIELD_HEIGHT
-from assets import CircuitGrid, ui
+from assets import WINDOW_WIDTH, WINDOW_HEIGHT, FPS, FIELD_HEIGHT, WIDTH_UNIT
+from assets import CircuitGrid, ui, paddle
 
 pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -11,6 +11,11 @@ def main():
 
     # initialize game
     circuit_grid = CircuitGrid(xpos=5, ypos=FIELD_HEIGHT)
+    classical_paddle = paddle.Paddle()
+    quantum_paddles = paddle.QuantumPaddles(WINDOW_WIDTH - 9*WIDTH_UNIT)
+    moving_sprites = pygame.sprite.Group()
+    moving_sprites.add(classical_paddle)
+    moving_sprites.add(quantum_paddles.paddles)
 
     exit = False
     while not exit:
@@ -24,6 +29,7 @@ def main():
         # draw game
         circuit_grid.draw(screen)
         ui.draw_statevector_grid(screen)
+        moving_sprites.draw(screen)
         pygame.display.flip()
 
         # set game framerate
