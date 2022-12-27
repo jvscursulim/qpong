@@ -7,12 +7,12 @@ Reproducing an implementation of a quantum verison of the game pong called QPong
 
 * Step 1: Clone this repository
 ```bash
-git clone 
+git clone https://github.com/jvscursulim/qpong.git
 ```
 
-* Step 2: 
+* Step 2: Access the folder with the files of the game
 ```bash
-cd 
+cd qpong
 ```
 
 * Step 3: Install pipenv
@@ -36,6 +36,10 @@ python qpong.py
 ```
 
 * Step 6: Have fun and learn a little bit about quantum computing! :)
+
+## How to play 
+
+## Printscreens
 
 ## References:
 
