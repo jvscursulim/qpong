@@ -55,9 +55,37 @@ python qpong.py
 
 * Step 8: Have fun and learn a little bit about quantum computing! :)
 
-## How to play 
+## Instructions
+
+### Cursor movement
+* W: UP
+* S: DOWN
+* A: LEFT
+* D: RIGHT
+
+### Apply quantum gates to move the paddle
+* Z: Apply a Z gate
+* X: Apply a X gate
+* Y: Apply a Y gate
+* H: Apply a Hadamard gate
+* Z + C: Apply a CZ gate
+* X + C: Apply a CNOT gate
+* Y + C: Apply a CY gate
+* H + C: Apply a controlled Hadamard gate
+* Z + LEFT/RIGHT ARROW: Apply Rz gate (You can change the rotation angle pressing LEFT/RIGHT ARROW)
+* X + LEFT/RIGHT ARROW: Apply Rx gate (You can change the rotation angle pressing LEFT/RIGHT ARROW)
+* Y + LEFT/RIGHT ARROW: Apply Ry gate (You can change the rotation angle pressing LEFT/RIGHT ARROW)
+* Z + LEFT/RIGHT ARROW + C: Apply a controlled Rz gate
+* X + LEFT/RIGHT ARROW + C: Apply a controlled Rx gate
+* Y + LEFT/RIGHT ARROW + C: Apply a controlled Ry gate
+* The combination of keys that produce a controlled gate + UP/DOWN ARROW: Changes the control qubit of the gate.
+* SPACE: Reset the quantum circuit
 
 ## Printscreens
+
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
+![Image](https://github.com/jvscursulim/qpong/blob/master/assets/images/Logo.png)
 
 ## References:
 
@@ -65,3 +93,4 @@ python qpong.py
 2. [QPong from scracth - Part 2](https://www.youtube.com/watch?v=PYthycN_Tq8&t=3360s)
 3. [QPong version 1](https://github.com/qpong/qpong)
 4. [QPong Unity version](https://github.com/QPong/QPong-Unity)
+5. [QPong 12 Days of Qiskit Livestream code](https://github.com/QPong/qpong-livestream/tree/reference)
