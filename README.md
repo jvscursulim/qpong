@@ -28,6 +28,7 @@ python -m venv env
 ```
 
 * Step 4: Activate your virtual environment
+
 Windows (Powershell)
 ```bash
 env/Scripts/Activate.ps1
